@@ -36,9 +36,8 @@ public class Multiple_Threads_Accepting {
                            OutputStream ou = socket.getOutputStream();
 
                            int data;
-
-                           while ((data = in.read()) != -1) {
-                               ou.write(data);
+                           ou.write(200000);
+                           while(true){
                            }
                        }catch ( Exception ex){
                            System.out.println(ex);

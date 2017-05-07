@@ -11,42 +11,19 @@ import java.net.Socket;
 public class SingleThread {
 
     public static void main(String... args) {
-
-
-        try {
-
+       try {
             System.out.println("Process ID : " + getPID());
-          //  Thread.sleep(20000);
 
-            System.out.println("Process ID : " + getPID());
-            // Create Socket
+            // Creates Socket..
+            //
+            // verify this Socket is nothing but a combination of source address + source port + destination address + destination port.
+            // it is of no use unless some one listens on a socket.
+
             ServerSocket ss = new ServerSocket(11111);
-
+            ss.accept();
+            System.out.println("ACCEPTED");
             while (true) {
-
-
             }
-//            Socket socket = ss.accept();
-//
-//
-//            InputStream in = socket.getInputStream();
-//            OutputStream ou = socket.getOutputStream();
-//
-//            int data;
-//            while(true){
-//
-//                while ((data = in.read()) != -1) {
-//
-//                    ou.write(data);
-//                }
-//
-//            }
-//            while ((data = in.read()) != -1) {
-//m,/
-//                ou.write(data);
-//            }
-
-            // socket.getInputStream().close();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
